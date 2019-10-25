@@ -1,0 +1,27 @@
+READREG AX
+PUSHCST 1
+POP BX
+CALL fact_cycle
+JMP end
+
+fact_cycle:
+PUSHCST 1
+PUSHREG AX
+JE ret_cycle
+
+PUSHREG BX
+PUSHREG AX
+MUL
+POP BX
+
+PUSHCST 1
+PUSHREG AX
+SUB
+POP AX
+CALL fact_cycle
+
+ret_cycle:
+RET
+
+end:
+PRINTREG BX
