@@ -20,15 +20,17 @@
 #include "remove_defines.cpp"
 
 #include "third_defines_pack.cpp"
+#include "execution_code_defines_pack.cpp"
 #include "compiler_data.cpp"
+#include "remove_execution_code_defines.cpp"
 #include "remove_defines.cpp"
 
 void print_arg(types type, int arg, char* cur_str, assembler_compile *comp) {
     char* buffch = (char*) calloc(10, sizeof(int));
     switch (type) {
         case cst: {
-            if (arg >= 0 && arg%1000 == 0) sprintf(buffch, " %d", arg);
-            else if (arg > 0 && (-arg)%1000 == 0) sprintf(buffch, " %d", arg);
+            if (arg >= 0 && arg%1000 == 0) sprintf(buffch, " %d", arg/1000);
+            else if (arg > 0 && (-arg)%1000 == 0) sprintf(buffch, " %f", double(arg)/1000);
             else {
                 double w = arg;
                 sprintf(buffch, " %f", w/1000);
@@ -72,8 +74,8 @@ int main(int args, char* argv []) {
     if (args <= 1) input_file = "result.txt";
     else input_file = argv[1];
 
-    if (args <= 1) input_file = "disass_result.txt";
-    else input_file = argv[2];
+    if (args <= 2) output_file = "disass_result.txt";
+    else output_file = argv[2];
 
     AutoFree<int> code;
     int size = read_file_bin(&code, input_file);

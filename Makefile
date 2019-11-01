@@ -149,86 +149,86 @@ my_disassembler/fast:
 	$(MAKE) -f CMakeFiles/my_disassembler.dir/build.make CMakeFiles/my_disassembler.dir/build
 .PHONY : my_disassembler/fast
 
-my_compiler.o: my_compiler.cpp.o
+main_files/my_compiler.o: main_files/my_compiler.cpp.o
 
-.PHONY : my_compiler.o
-
-# target to build an object file
-my_compiler.cpp.o:
-	$(MAKE) -f CMakeFiles/my_compiler.dir/build.make CMakeFiles/my_compiler.dir/my_compiler.cpp.o
-.PHONY : my_compiler.cpp.o
-
-my_compiler.i: my_compiler.cpp.i
-
-.PHONY : my_compiler.i
-
-# target to preprocess a source file
-my_compiler.cpp.i:
-	$(MAKE) -f CMakeFiles/my_compiler.dir/build.make CMakeFiles/my_compiler.dir/my_compiler.cpp.i
-.PHONY : my_compiler.cpp.i
-
-my_compiler.s: my_compiler.cpp.s
-
-.PHONY : my_compiler.s
-
-# target to generate assembly for a file
-my_compiler.cpp.s:
-	$(MAKE) -f CMakeFiles/my_compiler.dir/build.make CMakeFiles/my_compiler.dir/my_compiler.cpp.s
-.PHONY : my_compiler.cpp.s
-
-my_disassembler.o: my_disassembler.cpp.o
-
-.PHONY : my_disassembler.o
+.PHONY : main_files/my_compiler.o
 
 # target to build an object file
-my_disassembler.cpp.o:
-	$(MAKE) -f CMakeFiles/my_disassembler.dir/build.make CMakeFiles/my_disassembler.dir/my_disassembler.cpp.o
-.PHONY : my_disassembler.cpp.o
+main_files/my_compiler.cpp.o:
+	$(MAKE) -f CMakeFiles/my_compiler.dir/build.make CMakeFiles/my_compiler.dir/main_files/my_compiler.cpp.o
+.PHONY : main_files/my_compiler.cpp.o
 
-my_disassembler.i: my_disassembler.cpp.i
+main_files/my_compiler.i: main_files/my_compiler.cpp.i
 
-.PHONY : my_disassembler.i
+.PHONY : main_files/my_compiler.i
 
 # target to preprocess a source file
-my_disassembler.cpp.i:
-	$(MAKE) -f CMakeFiles/my_disassembler.dir/build.make CMakeFiles/my_disassembler.dir/my_disassembler.cpp.i
-.PHONY : my_disassembler.cpp.i
+main_files/my_compiler.cpp.i:
+	$(MAKE) -f CMakeFiles/my_compiler.dir/build.make CMakeFiles/my_compiler.dir/main_files/my_compiler.cpp.i
+.PHONY : main_files/my_compiler.cpp.i
 
-my_disassembler.s: my_disassembler.cpp.s
+main_files/my_compiler.s: main_files/my_compiler.cpp.s
 
-.PHONY : my_disassembler.s
+.PHONY : main_files/my_compiler.s
 
 # target to generate assembly for a file
-my_disassembler.cpp.s:
-	$(MAKE) -f CMakeFiles/my_disassembler.dir/build.make CMakeFiles/my_disassembler.dir/my_disassembler.cpp.s
-.PHONY : my_disassembler.cpp.s
+main_files/my_compiler.cpp.s:
+	$(MAKE) -f CMakeFiles/my_compiler.dir/build.make CMakeFiles/my_compiler.dir/main_files/my_compiler.cpp.s
+.PHONY : main_files/my_compiler.cpp.s
 
-my_executor.o: my_executor.cpp.o
+main_files/my_disassembler.o: main_files/my_disassembler.cpp.o
 
-.PHONY : my_executor.o
+.PHONY : main_files/my_disassembler.o
 
 # target to build an object file
-my_executor.cpp.o:
-	$(MAKE) -f CMakeFiles/my_executor.dir/build.make CMakeFiles/my_executor.dir/my_executor.cpp.o
-.PHONY : my_executor.cpp.o
+main_files/my_disassembler.cpp.o:
+	$(MAKE) -f CMakeFiles/my_disassembler.dir/build.make CMakeFiles/my_disassembler.dir/main_files/my_disassembler.cpp.o
+.PHONY : main_files/my_disassembler.cpp.o
 
-my_executor.i: my_executor.cpp.i
+main_files/my_disassembler.i: main_files/my_disassembler.cpp.i
 
-.PHONY : my_executor.i
+.PHONY : main_files/my_disassembler.i
 
 # target to preprocess a source file
-my_executor.cpp.i:
-	$(MAKE) -f CMakeFiles/my_executor.dir/build.make CMakeFiles/my_executor.dir/my_executor.cpp.i
-.PHONY : my_executor.cpp.i
+main_files/my_disassembler.cpp.i:
+	$(MAKE) -f CMakeFiles/my_disassembler.dir/build.make CMakeFiles/my_disassembler.dir/main_files/my_disassembler.cpp.i
+.PHONY : main_files/my_disassembler.cpp.i
 
-my_executor.s: my_executor.cpp.s
+main_files/my_disassembler.s: main_files/my_disassembler.cpp.s
 
-.PHONY : my_executor.s
+.PHONY : main_files/my_disassembler.s
 
 # target to generate assembly for a file
-my_executor.cpp.s:
-	$(MAKE) -f CMakeFiles/my_executor.dir/build.make CMakeFiles/my_executor.dir/my_executor.cpp.s
-.PHONY : my_executor.cpp.s
+main_files/my_disassembler.cpp.s:
+	$(MAKE) -f CMakeFiles/my_disassembler.dir/build.make CMakeFiles/my_disassembler.dir/main_files/my_disassembler.cpp.s
+.PHONY : main_files/my_disassembler.cpp.s
+
+main_files/my_executor.o: main_files/my_executor.cpp.o
+
+.PHONY : main_files/my_executor.o
+
+# target to build an object file
+main_files/my_executor.cpp.o:
+	$(MAKE) -f CMakeFiles/my_executor.dir/build.make CMakeFiles/my_executor.dir/main_files/my_executor.cpp.o
+.PHONY : main_files/my_executor.cpp.o
+
+main_files/my_executor.i: main_files/my_executor.cpp.i
+
+.PHONY : main_files/my_executor.i
+
+# target to preprocess a source file
+main_files/my_executor.cpp.i:
+	$(MAKE) -f CMakeFiles/my_executor.dir/build.make CMakeFiles/my_executor.dir/main_files/my_executor.cpp.i
+.PHONY : main_files/my_executor.cpp.i
+
+main_files/my_executor.s: main_files/my_executor.cpp.s
+
+.PHONY : main_files/my_executor.s
+
+# target to generate assembly for a file
+main_files/my_executor.cpp.s:
+	$(MAKE) -f CMakeFiles/my_executor.dir/build.make CMakeFiles/my_executor.dir/main_files/my_executor.cpp.s
+.PHONY : main_files/my_executor.cpp.s
 
 # Help Target
 help:
@@ -241,15 +241,15 @@ help:
 	@echo "... my_executor"
 	@echo "... my_compiler"
 	@echo "... my_disassembler"
-	@echo "... my_compiler.o"
-	@echo "... my_compiler.i"
-	@echo "... my_compiler.s"
-	@echo "... my_disassembler.o"
-	@echo "... my_disassembler.i"
-	@echo "... my_disassembler.s"
-	@echo "... my_executor.o"
-	@echo "... my_executor.i"
-	@echo "... my_executor.s"
+	@echo "... main_files/my_compiler.o"
+	@echo "... main_files/my_compiler.i"
+	@echo "... main_files/my_compiler.s"
+	@echo "... main_files/my_disassembler.o"
+	@echo "... main_files/my_disassembler.i"
+	@echo "... main_files/my_disassembler.s"
+	@echo "... main_files/my_executor.o"
+	@echo "... main_files/my_executor.i"
+	@echo "... main_files/my_executor.s"
 .PHONY : help
 
 
