@@ -3,7 +3,7 @@
 //
 start_definition
     add_registers_count(5)
-    add_commands_count(23)
+    add_commands_count(29)
     start_registers_definition
         add_register(AX)
         add_register(BX)
@@ -242,7 +242,7 @@ start_definition
                                   ASSERT(comp.registers_count > reg_pos);
                                   ASSERT(proc->stack_size() > 0);
                                   int a = POP();
-                                  proc->regs[reg_pos] = proc->my_malloc(a);
+                                  proc->regs[reg_pos] = proc->my_malloc(a/1000)*1000;
                                   ++pos;)
              end_add_code
         start_add_command(FREE     )
@@ -252,8 +252,7 @@ start_definition
         add_prog_code (ASSERT(pos < code_size);
                              ASSERT(proc->stack_size() > 0);
                              int a = POP();
-                             proc->my_free(a);
-                             ++pos;)
+                             proc->my_free(a/1000);)
         end_add_code
 
         start_add_command(PUSHMEM )
@@ -264,8 +263,8 @@ start_definition
                                ASSERT(proc->stack_size() > 0);
                                int a = POP();
                                int b = POP();
-                               proc->memory[a] = b;
-                                       ++pos;)
+                               proc->memory[a/1000] = b;
+                               )
                       end_add_code
 
         start_add_command(PUSHMEMREG )
@@ -279,7 +278,7 @@ start_definition
                                ASSERT(0 <= reg_pos);
                                ASSERT(comp.registers_count > reg_pos);
                                int a = POP();
-                               proc->memory[a] = proc->regs[reg_pos];
+                               proc->memory[a/1000] = proc->regs[reg_pos];
                                ++pos;)
                       end_add_code
 
@@ -292,7 +291,7 @@ start_definition
                                int ans = code->ptr[pos];
                                ASSERT(proc->stack_size() > 0);
                                int a = POP();
-                               proc->memory[a] = ans;
+                               proc->memory[a/1000] = ans;
                                ++pos;)
         end_add_code
 
@@ -307,7 +306,7 @@ start_definition
                                ASSERT(0 <= reg_pos);
                                ASSERT(comp.registers_count > reg_pos);
                                int a = POP();
-                               proc->regs[reg_pos] = proc->memory[a];
+                               proc->regs[reg_pos] = proc->memory[a/1000];
                                        ++pos;)
         end_add_code
     end_commands_definition

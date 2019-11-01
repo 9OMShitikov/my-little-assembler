@@ -29,8 +29,8 @@ void print_arg(types type, int arg, char* cur_str, assembler_compile *comp) {
     char* buffch = (char*) calloc(10, sizeof(int));
     switch (type) {
         case cst: {
-            if (arg >= 0 && arg%1000 == 0) sprintf(buffch, " %d", arg);
-            else if (arg > 0 && (-arg)%1000 == 0) sprintf(buffch, " %d", arg);
+            if (arg >= 0 && arg%1000 == 0) sprintf(buffch, " %d", arg/1000);
+            else if (arg > 0 && (-arg)%1000 == 0) sprintf(buffch, " %f", double(arg)/1000);
             else {
                 double w = arg;
                 sprintf(buffch, " %f", w/1000);

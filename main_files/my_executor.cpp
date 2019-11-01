@@ -26,7 +26,7 @@
 #include "remove_defines.cpp"
 
 int main(int args, char* argv[]) {
-    proc cur_proc (100);
+    proc cur_proc (50);
     assembler_compile comp;
     const char* input_file;
     if (args < 2) input_file = "result.txt";
@@ -36,8 +36,10 @@ int main(int args, char* argv[]) {
     int size = read_file_bin(&code, input_file);
 
     for (int i = 0; i < size;) {
-        /*std::cout<<i<<" "<<code.ptr[i]<<std::endl;*/
+        /*std::cout<<i<<" "<<comp.commands_names[code.ptr[i]]<<std::endl;*/
         exec_cmd(i, &code, &cur_proc, size, comp);
+        /*cur_proc.print();*/
     }
+    /*cur_proc.print();*/
     return 0;
 }
