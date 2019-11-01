@@ -20,11 +20,13 @@
 #include "remove_defines.cpp"
 
 #include "third_defines_pack.cpp"
+#include "execution_code_defines_pack.cpp"
 #include "compiler_data.cpp"
+#include "remove_execution_code_defines.cpp"
 #include "remove_defines.cpp"
 
 int main(int args, char* argv[]) {
-    proc cur_proc;
+    proc cur_proc (100);
     assembler_compile comp;
     const char* input_file;
     if (args < 2) input_file = "result.txt";

@@ -20,7 +20,9 @@
 #include "remove_defines.cpp"
 
 #include "third_defines_pack.cpp"
+#include "execution_code_defines_pack.cpp"
 #include "compiler_data.cpp"
+#include "remove_execution_code_defines.cpp"
 #include "remove_defines.cpp"
 
 void print_arg(types type, int arg, char* cur_str, assembler_compile *comp) {
@@ -72,8 +74,8 @@ int main(int args, char* argv []) {
     if (args <= 1) input_file = "result.txt";
     else input_file = argv[1];
 
-    if (args <= 1) input_file = "disass_result.txt";
-    else input_file = argv[2];
+    if (args <= 2) output_file = "disass_result.txt";
+    else output_file = argv[2];
 
     AutoFree<int> code;
     int size = read_file_bin(&code, input_file);

@@ -20,7 +20,9 @@
 #include "remove_defines.cpp"
 
 #include "third_defines_pack.cpp"
+#include "execution_code_defines_pack.cpp"
 #include "compiler_data.cpp"
+#include "remove_execution_code_defines.cpp"
 #include "remove_defines.cpp"
 
 bool arg_check(types type, std::string_view &st, assembler_compile& comp, bor& labels_bor) {
